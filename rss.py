@@ -67,7 +67,7 @@ def create_feed_checker(feed_url):
         last_id_from_db = db.get_link(feed_url).link
 
         if last_id_from_db == "*":
-            message = f"/qbmirror@MMLeechv1_bot ```{first_entry.link}```"
+            message = f"/qbmirror@MMLeechv1_bot {first_entry.link}"
             try:
                 app.send_message(log_channel, message)
                 if app2 is not None:
@@ -91,7 +91,7 @@ def create_feed_checker(feed_url):
                 break
 
             # ↓ Edit this message as your needs.
-            message = f"/qbmirror@MMLeechv1_bot ```{entry.link}```"
+            message = f"/qbmirror@MMLeechv1_bot {entry.link}"
             try:
                 app.send_message(log_channel, message)
                 if app2 is not None:
